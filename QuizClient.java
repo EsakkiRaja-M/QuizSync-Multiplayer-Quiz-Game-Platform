@@ -37,7 +37,7 @@ public class QuizClient {
             clientID = clientID.toLowerCase();
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "raja@m");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "ur_password");
                 Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery("select * from game where name='" + clientName + "' and id='" + clientID + "'");
                 if (rs.next()) {
